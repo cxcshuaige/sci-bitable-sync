@@ -1,0 +1,21 @@
+.box-shadow-normal(@b:5px,@c:#000) {
+    -webkit-box-shadow: 0 0 @b @c;
+    -moz-box-shadow: 0 0 @b @c;
+    box-shadow: 0 0 @b @c;
+}
+.border-radius-normal(@b:6px) {
+    -webkit-border-radius: @b;
+    -moz-border-radius: @b;
+    border-radius: @b;
+}
+.mr(@b:1rem) {
+    margin-right: @b;
+}
+.mt(@b:1rem) {
+    margin-top: @b;
+}
+
+.bg-img(@uri,@w:100%,@h:100%) {
+    background-image: url("@{uri}");
+    background-size: @w @h;
+}

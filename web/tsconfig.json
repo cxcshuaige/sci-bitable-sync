@@ -1,0 +1,49 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"removeComments": true,
+		"allowSyntheticDefaultImports": true,
+		// 严格模式下，this默认指向 undefined，否则才是window
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		// false 允许方法入参类型不明确
+		"noImplicitAny": false,
+		// false 允许this类型不明确
+		"noImplicitThis": false,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"noEmit": true,
+		// react 对应 @babel/preset-react runtime classic
+		// react-jsx 对应 @babel/preset-react runtime automatic
+		"jsx": "react", 
+		// "jsx": "preserve",
+		// "jsxFactory": "React",
+		"baseUrl": "./",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"paths": {
+			"@/*": [
+				"src/*"
+			],
+		}
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules/**/*"
+	]
+}

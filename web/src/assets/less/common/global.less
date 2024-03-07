@@ -1,0 +1,45 @@
+@import "./_variables";
+@import "./_mixins";
+@import "./_functions";
+@import "./_reset";
+@import "./_units";
+
+// Montserrat
+// https://yfb-fdd-item-icon.oss-cn-hangzhou.aliyuncs.com/devTool/2022-10/d8bebf6b-feea-44f0-9f7b-e1696cb459c0.woff
+// https://yfb-fdd-item-icon.oss-cn-hangzhou.aliyuncs.com/devTool/2022-10/d215918f-01e9-4ab8-91b1-d17f7ce9ca7d.woff2
+
+body {
+    font-family: "-apple-system","PingFang SC", "ui-sans-serif","system-ui","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+}
+
+.m-scroll-theme {
+    height: 100%;
+    overflow-y: auto;
+    flex: 1;
+    &::-webkit-scrollbar-track-piece {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #e4e4e4;
+        cursor: pointer;
+        box-shadow: 5px 0 20px #000;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #e4e4e4;
+        cursor: pointer;
+    }
+}
+
+.u-svg{
+    font-size: 20px;
+    transition: all .2s;
+}
+

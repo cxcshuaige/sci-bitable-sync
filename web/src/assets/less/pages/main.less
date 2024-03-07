@@ -1,0 +1,58 @@
+@import "../common/global";
+html,
+body,
+.g-sci-layout{
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+    // box-sizing: border-box;
+    // overflow: hidden;
+}
+.pc-body{
+    overflow: hidden;
+}
+
+
+//
+.sci-ploading{
+    /* 相对定位 */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* 使用自定义滤镜gooey */
+    filter: url(#SCIPloadingGooey);
+}
+.sci-ploading span{
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* 执行动画：动画名称 时长 加速后减速 无限次播放 */
+    animation: sciploading 2s ease-in-out infinite;
+    /* 动画延迟，通过var函数调用自定义属性--i，计算出要延迟的时间 */
+    animation-delay: calc(0.1s * var(--i));
+}
+.sci-ploading span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(#d1f5ff,#1683ff);
+    box-shadow: 0 0 30px #1683ff;
+}
+
+/* 定义动画 */
+@keyframes sciploading {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%,100%{
+        transform: rotate(360deg);
+    }
+}

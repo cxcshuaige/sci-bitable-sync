@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <title>BITable</title>
+    <!--__HTML_SSR_META__-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <!-- rem -->
+    <script>
+        (function(){var WIN=window;var DOC=document;var MATH=Math;var PARSE_FLOAT=parseFloat;var remCalc={rem:0};var docEl=WIN.document.documentElement;var tid=void 0;var refreshRem=function refreshRem(){var width=docEl.getBoundingClientRect().width;if(width>750){width=750}var rem=width/7.5;docEl.style.fontSize=rem+"px";remCalc.rem=rem;window.screenWidth_=window.innerWidth>0?window.innerWidth:screen.width;window.screenHeight_=window.innerHeight>0?window.innerHeight:screen.height;window.htmlFontSize_=rem;var actualSize=PARSE_FLOAT(WIN.getComputedStyle(DOC.documentElement)["font-size"]);if(actualSize!==rem&&actualSize>0&&MATH.abs(actualSize-rem)>1){var remScaled=rem*rem/actualSize;docEl.style.fontSize=remScaled+"px";window.htmlFontSize_=remScaled}};var dbcRefresh=function dbcRefresh(){clearTimeout(tid);tid=setTimeout(refreshRem,100)};WIN.addEventListener("resize",function(){dbcRefresh()},false);WIN.addEventListener("pageshow",function(e){if(e.persisted){dbcRefresh()}},false);refreshRem()})();
+    </script>
+    <!-- loader -->
+    <script>
+        window.SLOADER=function(url,cb,ercb,charset){var __addOnload=function(node,callback,errCallback){var READY_STATE_RE=/^(?:loaded|complete|undefined)$/;node.onload=node.onreadystatechange=function(){if(READY_STATE_RE.test(node.readyState)){node.onload=node.onreadystatechange=null;node=null;if(callback){callback()}}};node.onerror=function(){if(READY_STATE_RE.test(node.readyState)){node.onerror=null;node=null;if(errCallback){errCallback()}}}};var head=document.getElementsByTagName("head")[0]||document.documentElement;var baseElement=head.getElementsByTagName("base")[0];var isCSS=/\.css(?:\?|$)/i.test(url);var node=document.createElement(isCSS?"link":"script");if(charset){node.charset=charset}if(isCSS){node.rel="stylesheet";node.href=url}else{node.async=true;node.crossorigin="anonymous";node.src=url}baseElement?head.insertBefore(node,baseElement):head.appendChild(node);__addOnload(node,cb)};
+
+        // SLOADER('xxx.js',function(){ todo })
+    </script>
+</head>
+<body>
+    <!-- platform body -->
+    <script>
+        (function(){
+            var ua=navigator.userAgent;var platformCss="";function ispc(){var agents=["Android","iPhone","SymbianOS","Windows Phone","iPad","iPod"];var flag=true;for(var v=0;v<agents.length;v++){if(ua.indexOf(agents[v])>0){flag=false;break}}return flag}if(ispc()){platformCss="pc-body"}else{if(/(iPhone|iPod|iPad)/i.test(ua)){platformCss="wap-body ios-body"}else{platformCss="wap-body aos-body"}}document.body.className=platformCss;
+        })();
+    </script>
+    <div id="root"><!--__HTML_SSR_CONTENT__--></div>
+    <label id="Skeleton"><%= htmlWebpackPlugin.options.skeleton %></label>
+    <!-- <script> var vConsole = new VConsole(); </script> -->
+    <!--__HTML_SSR_SCRIPT__-->
+</body>
+</html>
